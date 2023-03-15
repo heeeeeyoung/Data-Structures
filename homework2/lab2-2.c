@@ -2,7 +2,7 @@
 
 int main() {
 	int i;							// int 타입의 정수 i 선언
-	int* ptr = NULL;				// int * 타입인 ptr 선언후, NULL 값으로 초기화)
+	int* ptr = NULL;				// int * 타입인 ptr 선언후, NULL 값으로 초기화
 	int** dptr;						// int ** 타입인 dptr 선언
 
 	i = 1234;						// 변수 i에 1234 대입
