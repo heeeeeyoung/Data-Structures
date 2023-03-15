@@ -18,6 +18,7 @@ int main() {
 	ptr = &i;
 	// * ptr is now holding the address of i							// ptr에 &i 대입
 
+
 	printf("\n[checking values after ptr = &i] \n");			// ptr에 &i 를 대입한 후의 값 확인
 	printf("value of i == %d \n", i);							// i의 값인 1234 출력
 	printf("address of i == %p \n", &i);						// i의 주소값 출력
@@ -29,6 +30,7 @@ int main() {
 
 	dptr = &ptr;
 	// * dptr is now holding the address of ptr						// dptr에 &ptr 대입	
+
 
 	printf("\n[checking values after dptr = &ptr] \n");			// dptr에 &ptr 을 대입한 후의 값 확인
 	printf("value of i == %d \n", i);							// i의 값인 1234 출력
@@ -42,8 +44,10 @@ int main() {
 	printf("value of **dptr == %d \n", **dptr);					// **dptr의 값인 i의 값 출력
 	printf("----[Kimheeyoung]---------[2021024037]---------\n");       // 나의 이름과 학번 출력
 
+
 	*ptr = 7777;
 	// * changing the value of *ptr										// *ptr의 값을 7777로 변경
+
 
 	printf("\n[after *ptr = 7777] \n");							// *ptr의 값을 7777로 변경한 후의 값 확인
 	printf("value of i == %d \n", i);							// i의 값인 7777 출력

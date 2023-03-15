@@ -13,6 +13,7 @@ int main() {
 
     printf("----[Kimheeyoung]---------[2021024037]---------\n");       // 나의 이름과 학번 출력
 
+    
     printf("Size of char : %ld byte \n", sizeof(char));                        // char 타입의 크기인 1byte 출력
     printf("Size of int : %ld bytes \n", sizeof(int));                         // int 타입의 크기인 4byte 출력
     printf("Size of float : %ld bytes \n", sizeof(float));                     // float 타입의 크기인 4byte 출력
@@ -20,6 +21,7 @@ int main() {
 
     printf("----[Kimheeyoung]---------[2021024037]---------\n");       // 나의 이름과 학번 출력
 
+    
     printf("Size of char *: %ld byte \n", sizeof(char*));                      // char * 타입의 크기인 8byte 출력
     printf("Size of int *: %ld bytes \n", sizeof(int*));                       // int * 타입의 크기인 8byte 출력
     printf("Size of float *: %ld bytes \n", sizeof(float*));                   // float * 타입의 크기인 8byte 출력
