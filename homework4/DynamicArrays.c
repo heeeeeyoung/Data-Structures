@@ -106,7 +106,7 @@ void print_matrix(int **matrix, int row, int col) {         //행렬을 출력�
 
         printf("\n");
     }
-    printf("------------------[Kimheeyoung]---------[2021024037]----------");
+    printf("-------[Kimheeyoung]---------[2021024037]----------");
     printf("\n\n");
 }
 
