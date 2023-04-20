@@ -31,11 +31,11 @@ int main(void) {
 	char command;										//char 형의 command 선언
 
 	do {													//command가 q와 Q가 아닐 경우에 반복
-		printf("\n-----------[2021024037]--------[Kimheeyoung]---------------\n");		//나의 학번과 이름 출력
+        printf("--------[2021024037]-----------[Kimheeyoung]------------\n");       //나의 학번과 이름 출력
 		printf("                     Circular Q                   \n");
-		printf("\n-----------[2021024037]--------[Kimheeyoung]---------------\n");		//나의 학번과 이름 출력
+        printf("--------[2021024037]-----------[Kimheeyoung]------------\n");       //나의 학번과 이름 출력
 		printf(" Insert=i,  Delete=d,   PrintQ=p,   Debug=b,   Quit=q \n");				//옵션 제시
-		printf("\n-----------[2021024037]--------[Kimheeyoung]---------------\n");		//나의 학번과 이름 출력
+        printf("--------[2021024037]-----------[Kimheeyoung]------------\n");       //나의 학번과 이름 출력
 
 		printf("Command = ");			//사용자로부터 옵션을 입력받음
 		scanf_s(" %c", &command);
