@@ -35,7 +35,7 @@ int main()
 
 
 	do{             //반복
-		printf("----------------------------------------------------------------\n");           //옵션 출력
+		printf("---------[2021024037]-----------[Kimheeyoung]------------------\n");           //옵션 출력
 		printf("                     Doubly Linked  List                        \n");
 		printf("----------------------------------------------------------------\n");
 		printf(" Initialize    = z           Print         = p \n");
@@ -293,52 +293,61 @@ int insertNode(headNode* h, int key) {                  //사용자가 입력한
 	listNode* n = h->first;             //listNode 구조체 변수 n을 만들고, 리스트의 처음을 대입
 
 	while(n != NULL) {                              //n이 NULL값이 아니면 반복
-		if(n->key >= key) {                         //만약 n의 key가 사용자로부터 입력받은 값보다 크면
-			if(n == h->first) {
-				insertFirst(h, key);
-			} else { 
-				node->rlink = n;
+		if(n->key >= key) {                         //만약 n의 key가 사용자로부터 입력받은 값보다 크거나 같으면
+			if(n == h->first) {             //입력받은 값이 리스트의 첫번째 값과 같다면
+				insertFirst(h, key);        //h와 key를 매개변수로 하는 inserFirst 함수 실행
+			} 
+            
+            else {                          //입력받은 값이 리스트의 첫번째 값보다 같지 않다면
+				node->rlink = n;            //리스트 내애 입력받은 값의 위치를 찾음
 				node->llink = n->llink;
 				n->llink->rlink = node;
 			}
 			return 0;
 		}
 
-		n = n->rlink;
+		n = n->rlink;                       //변경된 값에 맞추어 n의 값 설정
 	}
+    insertLast(h, key);                 //위의 경우가 아니라면 입력받은 값이 가장 작은 것 이므로, insertLast 함수 실행 
+
 	return 0;
 }
 
 
-int deleteNode(headNode* h, int key) {
-
-	if (h->first == NULL)
+int deleteNode(headNode* h, int key) {      //사용자가 입력한 노드를 리스트에서 삭제하는 함수
+	if (h->first == NULL)                   //만약 리스트가 비어있다면
 	{
-		printf("nothing to delete.\n");
+		printf("nothing to delete.\n");     //삭제 할 노드가 없음을 알리는 메세지 출력
 		return 1;
 	}
 
-	listNode* n = h->first;
+	listNode* n = h->first;             //listNode 구조체 변수 n선언 후, 리스트의 첫번째를 대입
 
-	while(n != NULL) {
-		if(n->key == key) {
-			if(n == h->first) { 
-				deleteFirst(h);
-			} else if (n->rlink == NULL){ 
-				deleteLast(h);
-			} else { 
-				n->llink->rlink = n->rlink;
-				n->rlink->llink = n->llink;
-				free(n);
+	while(n != NULL) {                      //n이 NULL일 동안 반복
+		if(n->key == key) {                     //만약 n의 key가 사용자가 삭제하기 위해 입력한 값과 같다면
+			if(n == h->first) {             //만약 n이 리스트의 첫번째 요소라면
+				deleteFirst(h);             //h를 매개변수로 하는 deleteFirst 함수 실행
+			} 
+            
+            else if (n->rlink == NULL){   //rlink가 NULL값이라면
+				deleteLast(h);      //h를 매개변수로 하는 deleteLast 함수 실행  
+			} 
+            
+            else {                      //그 외의 상황이라면
+				n->llink->rlink = n->rlink;     //n의 llink의 rlink에 n의 rlink를 대입
+				n->rlink->llink = n->llink;     //nd의 rlink의 llink에 n의 llink를 대입
+				free(n);                        //n의 메모리 할당해제
 			}
-			return 1;
+			return 1;               //return 0
 		}
 
-		n = n->rlink;
+		n = n->rlink;           //n의 값을 n의 rlink 값으로 설정
 	}
 
 
-	printf("cannot find the node for key = %d\n", key);
+	printf("cannot find the node for key = %d\n", key);     
+    //사용자가 입력한 값이 리스트에 없을 경우, 해당 노드가 없음을 알리는 메세지 출력
+
 	return 1;
 }
 
