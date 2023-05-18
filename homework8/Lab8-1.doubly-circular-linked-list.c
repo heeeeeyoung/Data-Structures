@@ -32,15 +32,15 @@ int main()
 	do{
         //옵션 출력
 
-		printf("----------------------------------------------------------------\n");
-		printf("                  Doubly Circular Linked List                   \n");
-		printf("----------------------------------------------------------------\n");
+		printf("-----------[2021024037]-------[Kimheeyoung]---------\n");
+		printf("               Doubly Circular Linked List          \n");
+		printf("-----------[2021024037]-------[Kimheeyoung]---------\n");
 		printf(" Initialize    = z           Print         = p \n");
 		printf(" Insert Node   = i           Delete Node   = d \n");
 		printf(" Insert Last   = n           Delete Last   = e\n");
 		printf(" Insert First  = f           Delete First  = t\n");
 		printf(" Invert List   = r           Quit          = q\n");
-		printf("----------------------------------------------------------------\n");
+		printf("-----------[2021024037]-------[Kimheeyoung]---------\n");
 
 		printf("Command = ");           //사용자로부터 command 의 값을 입력받음
 		scanf(" %c", &command);
