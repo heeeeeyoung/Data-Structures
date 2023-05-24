@@ -7,6 +7,7 @@ typedef struct node {       //구조체 선언
 	struct node *right;     //노드의 오른쪽 포인터 right
 } Node;
 
+
 int initializeBST(Node** h);        //리스트를 초기화하는 함수
 
 
