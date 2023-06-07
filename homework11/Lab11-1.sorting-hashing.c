@@ -24,7 +24,6 @@ int search(int *ht, int key);
 
 int main() {
 	char command;   //char형의 변수 command 생성
-
 	int *array = NULL;
 	int *hashtable = NULL;
 	int key = -1;
@@ -393,6 +392,6 @@ int search(int *ht, int key) {
         //ht[++index]가 key값과 같지 않다면
 		index = index % MAX_HASH_TABLE_SIZE;        //index값 갱신
 	}
-    
+
 	return index;       //index값 리턴
 }
